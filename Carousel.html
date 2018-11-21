@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #box {
+            width: 70%;
+            margin: 30px auto;
+            position: relative;
+        }
+        img {
+            width: 100%;
+        }
+        #pageView_all{
+            width: 500px;
+            height: 30px;
+            /* background-color: brown; */
+            z-index: 2;
+            position: relative;
+            left: 50%;
+            bottom: 60px;
+            transform: translate(-50%);
+            text-align: center;
+        }
+        #pageView_all li {
+            width: 20px;
+            height: 20px;
+            border-radius: 12px;
+            border:  2px solid gray;
+            display: inline-block;
+            margin: 2px;
+        }
+        #pageView_all .active {
+            border-color: black;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <img id="imgChange" src="img-design-web/Chengbao/Chengbao-1.JPG" alt="">
+        <div id="pageView_all">
+            <li class="pageView active"></li>
+            <li class="pageView"></li>
+            <li class="pageView"></li>
+            <li class="pageView"></li>
+            <li class="pageView"></li>
+            <li class="pageView"></li>
+        </div>
+    </div>
+     <script>
+        var index;
+        var timer;
+        var currentPage;
+        var aPage =document.getElementsByTagName("li");
+        window.onload=function(){
+        index = 0;
+        timer = null;
+        currentPage = 0;
+        }
+        startTimer();
+        
+        for(var i=0; i <aPage.length;i++){
+            //紀錄是哪個下標點擊
+            aPage[i].index = i;
+        
+            aPage[i].onclick = function(){
+                //關閉計時
+                stopTimer();
+
+                //根據下標切換
+                index = this.index;
+                changeView();
+
+                //開啟計時
+                startTimer();
+            }
+        }
+        
+        
+        
+        
+        
+        //開始計時
+        function startTimer(){
+            if(timer ==null){
+                timer = setInterval(upDate,3000);
+            }
+        }
+
+        //關閉計時
+        function stopTimer(){
+            clearInterval(timer);
+            timer =null;
+        }
+        
+        //觸發開始操作
+        function upDate(){
+            index++;
+            changeView();
+        }
+        //改變圖片的顯示
+        function changeView(){
+            if(index>5){
+                index = 0;
+            }
+            document.getElementById("imgChange").src='img-design-web/Chengbao/Chengbao-' + (index+1) +'.JPG';
+            //改變小圓圈
+            aPage[currentPage].className= "";
+            currentPage = index;
+            aPage[currentPage].className="active"
+        }
+
+    </script>
+</body>
+</html>

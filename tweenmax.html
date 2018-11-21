@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+    <style>
+        .ball {
+            width: 100px;
+            height: 100px;
+            border-radius: 50px;
+            background-color: bisque;
+        }
+
+        #speak {
+            width: 50px;
+            height: 50px;
+            background-color: black;
+        }
+
+
+        /* TimelineMax */
+        .obj {
+            position: relative;
+            width: 50px;
+            line-height: 50px;
+            background: #23ac0e;
+            border-radius: 5px;
+            color: #fff;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        #obj1 {
+            background: #23ac0e;
+        }
+
+        #obj2 {
+            background: #989898;
+        }
+
+        #obj3 {
+            background: #f38630;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="ball" onclick="say()"></div>
+    <div id="speak"></div>
+    
+    
+    <!-- TimelineMax -->
+    <div id="obj1" class="obj">box1</div>
+    <div id="obj2" class="obj">box2</div>
+    <div id="obj3" class="obj">box3</div>
+    
+    <script>
+        TweenMax.from(".ball", 5, { //設定 class為ball的物件,執行時間為5s,從x為500的位置.大小為0.5
+            x: 500, //顏色為藍色.形狀為正方形.旋轉180度的方式開始執行到原本設定的位置
+            scale: 0.5,
+            backgroundColor: "blue",
+            borderRadius: 0,
+            rotation: 180,
+            ease: Elastic.easeOut //ease為速度的設定值   ,Elastic~Power0~3~Back~Bounce~Rough~SlowMo~Steppped       ,linear~Ease in~Ease out~Ease in out
+        })
+
+        function say() {
+            TweenMax.to("#speak", 5, { //設定 class為ball的物件,執行時間為5s,從x為500的位置.大小為0.5
+                x: 500,
+                y: 500, //顏色為藍色.形狀為正方形.旋轉180度的方式開始執行到原本設定的位置
+                scale: 0.5,
+                backgroundColor: "blue",
+                borderRadius: 0,
+                // skewY(5),
+                // this.innerHTML=hi,
+                ease: Elastic.ease //ease為速度的設定值   ,Elastic~Power0~3~Back~Bounce~Rough~SlowMo~Steppped       ,linear~Ease in~Ease out~Ease in out
+            })
+        }
+
+            // TimelineMax
+        var tm = new TimelineMax();
+        tm.to("#obj1", 2, {
+            x: 200
+        });
+        tm.to("#obj2", 3, {
+            x: 400,
+            rotation: 360
+        });
+        tm.to("#obj3", 2, {
+            alpha: 0
+        }, 7);
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+     #all {
+        width: 200px;
+        border: 1px solid black;
+        display:flex;
+        overflow: hidden;
+    }
+    #box_all {
+        width: 1000px;
+        height: auto;
+        border: 1px solid red;
+        position: relative;
+        display: flex;
+        animation: 20s q infinite;
+    }
+    .box {
+        width: 200px;
+        float: left;
+        border: 1px solid green;
+        position: relative;
+        
+    }
+    img {
+        width: 100%;
+        vertical-align: top;
+    }
+    @keyframes q {
+        0% {
+            left: 0;
+        }
+        4%{
+            left: 0%;
+        }
+        22%{
+            left: -100%;
+        }
+        26% {
+            left:-100%;
+        }
+        44% {
+            left:-200%;
+        }
+        48% {
+            left:-200%;
+        }
+        66% {
+            left:-300%;
+        }
+        70% {
+            left:-300%;
+        }
+        88% {
+            left:-400%;
+        }
+        92% {
+            left: -400%
+        }
+        100%{
+            left: 0;
+        }
+    }
+    </style>
+</head>
+<body>
+    <div id="all">
+        <div id="box_all">
+            <div class="box">
+                <img src="img-design-web/Zhongli Grand Hyatt Hall/Zhongli Grand Hyatt Hall-1.jpg" alt="">
+            </div>
+            <div class="box">
+                    <img src="img-design-web/Zhongli Grand Hyatt Hall/Zhongli Grand Hyatt Hall-2.jpg" alt="">
+            </div>
+            <div class="box">
+                    <img src="img-design-web/Zhongli Grand Hyatt Hall/Zhongli Grand Hyatt Hall-3.jpg" alt="">
+            </div>
+            <div class="box">
+                    <img src="img-design-web/Zhongli Grand Hyatt Hall/Zhongli Grand Hyatt Hall-4.jpg" alt="">
+            </div>
+            <div class="box">
+                    <img src="img-design-web/Zhongli Grand Hyatt Hall/Zhongli Grand Hyatt Hall-2.jpg" alt="">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

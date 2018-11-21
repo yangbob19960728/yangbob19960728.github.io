@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            position: relative;
+        }
+
+        .box {
+            width: 100%;
+            height: 100vh;
+            position: absolute;
+            display: none;
+        }
+
+        #Large_block_1 {
+            background-color: red;
+        }
+
+        #Large_block_2 {
+            background-color: blue;
+
+        }
+
+        #Large_block_3 {
+            background-color: blueviolet;
+        }
+
+        #Large_block_4 {
+            background-color: crimson;
+        }
+
+        #Large_block_5 {
+            background-color: darkgreen;
+        }
+
+        #add {
+            width: 100px;
+            height: 100px;
+            background-color: black;
+            color: white;
+            position: fixed;
+            top: 500px;
+            right: 30px;
+            z-index: 3;
+        }
+
+        #less {
+            width: 100px;
+            height: 100px;
+            background-color: black;
+            color: white;
+            position: fixed;
+            top: 500px;
+            left: 30px;
+            z-index: 3;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="Large_block_1" class="box"></div>
+    <div id="Large_block_2" class="box"></div>
+    <div id="Large_block_3" class="box"></div>
+    <div id="Large_block_4" class="box"></div>
+    <div id="Large_block_5" class="box"></div>
+    <div id="add" onclick="change_add()">add</div>
+    <div id="less" onclick="change_less()">less</div>
+
+
+    <script>
+        var nowbox;
+        var nextbox;
+        var box_num;
+        var num;
+        var x; //現在的號碼
+        var y; //下一個的號碼
+        var w; //存放頁面的寬度
+        var h; //存放頁面的高度
+        var box;
+        var next;
+        window.onload = function () {
+            num = 1;
+            box_num = 5;
+            nowbox = "Large_block_1";
+            document.getElementById(nowbox).style.display = "block";
+        }
+
+        function change_add() {
+            w = window.screen.availWidth;
+            h = window.screen.availHeight;
+            num = num+1;
+            if (num > box_num) {
+                num = 1;
+                x = 5;
+                y = 1;
+            } else {
+                x = num-1;
+                y = num;
+            }
+            nowbox = "Large_block_" + x;
+            nextbox = "Large_block_" + y;
+            Large_block_run();
+        }
+
+        function Large_block_run() {
+            console.log(nextbox);
+            box = '#' + nowbox;
+            next = '#' + nextbox;
+            // document.getElementById(nextbox).style.left = "0px";
+            document.getElementById(nextbox).style.zIndex = 1;
+            document.getElementById(nextbox).style.display = "block";
+            document.getElementById(nowbox).style.zIndex = 2;
+            TweenMax.to(box, 0.5, {
+                x: "-" + w,
+                ease: Power0.linear
+            });
+            setTimeout(function () {
+                document.getElementById(nowbox).style.display = "none";
+                TweenMax.to(box, 0.01, {
+                    x: 0,
+                    ease: Power0.linear
+                });
+            }, 500);
+        }
+    </script>
+</body>
+
+</html>

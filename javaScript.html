@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #content_2 {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="change(1)">BTN1</button>
+    <button onclick="change(2)">BTN2</button>
+    <div id="contnet">
+        <div id="content_1">
+            大家好!!!!我是第一個按鈕
+        </div>
+        <div id="content_2">
+            這是第二個按鈕
+        </div>
+    </div>
+    
+    <script>
+        function change(id){
+            if(id == 1){
+                document.getElementById("content_1").style.display="block";
+                document.getElementById("content_2").style.display="none";
+            }else{
+                document.getElementById("content_1").style.display="none";
+                document.getElementById("content_2").style.display="block";
+            }
+        }
+    </script>
+</body>
+</html>

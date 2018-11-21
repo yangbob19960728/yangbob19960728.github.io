@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+    <style>
+        #booking {
+            width: 610px;
+            height: 200px;
+            background-color: blanchedalmond;
+            position: fixed;
+            left: calc(100% - 30px);
+            z-index: 2;
+        }
+        /* 訂票系統的按鈕 */
+        #booking_button {
+            width: 30px;      
+            font-size: 30px;
+            background-color: blue;
+            color: white;
+            border: 1px solid black;
+            cursor: pointer;
+            float: left;
+        }
+        #booking_info {
+            width: 550px;
+            height: 200px;
+            background-color: aquamarine;
+            float: left;
+            position: relative;
+        }
+        #button {
+            width: 100px;
+            height: 50px;
+            position: absolute;
+            right: 30px;
+            bottom: 5px;
+        }
+        #close_booking {
+            width: 100%;
+            height: 100vh;
+            background-color: black;
+            opacity: 0.2;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="booking">
+        <div id="booking_button"onclick="bookingTicket();">訂票系統</div>
+        <div id="booking_info">
+            <div id="button">
+                <button id="button_yes"onclick="alert('是否確認定票?')" >確認</button>
+                <input type="reset" value="取消" id="button_reset">
+            </div>
+        </div>
+    </div>
+    <div id="close_booking" onclick="closeBookingTicket()">
+    <div id="check_ticket"></div>
+
+    </div>
+    <script>
+       function bookingTicket (){
+        var close_booking = document.getElementById("close_booking");
+        var button_yes = document.getElementById("button_yes");
+        var button_reset = document.getElementById("button_reset");
+        close_booking.style.display ="block";
+        TweenMax.to("#booking",1,{         
+            x:-580,                        
+            ease:Power2.easeOut    
+         })
+         button_yes.addEventListener("click",closeBookingTicket);
+         close_booking.addEventListener("click",closeBookingTicket);
+         button_reset.addEventListener("click",closeBookingTicket);
+         function closeBookingTicket(){
+            close_booking.style.display ="none";
+            TweenMax.to("#booking",0.5,{          //設定 class為ball的物件,執行時間為5s,從x為500的位置.大小為0.5
+            x:0,                        
+            ease: Linear.easeOut    //ease為速度的設定值   ,Elastic~Power0~3~Back~Bounce~Rough~SlowMo~Steppped       ,linear~Ease in~Ease out~Ease in out
+         })
+         }
+       }
+        
+    </script>
+</body>
+</html>

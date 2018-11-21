@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .red {
+            color: red;
+        } 
+    </style>
+</head>
+<body>
+    <div id="box">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque enim excepturi quis voluptatem necessitatibus nihil repellendus qui atque eligendi 
+        numquam! Harum aperiam animi at voluptatum earum repellendus sequi, sed dolores! 
+    </div>
+    <script>
+        var box = document.getElementById("box");
+        box.onclick = function(){
+            box.classList.toggle("red");
+        }
+    </script>
+</body>
+</html>

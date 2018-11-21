@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+    <style>
+        #all {
+            width: 100%;
+            height: 500px;
+            overflow: hidden;
+            position: fixed;
+            left: 0;
+            top: 100px;
+            background-color: aqua;
+        }
+
+        .button {
+            width: 80px;
+            height: 50px;
+            border: 1px solid black;
+            float: left;
+            margin-right: 50px;
+        }
+
+        /* 要移動的大區塊 */
+        #box_all {
+            width: 400%;
+            height: 500px;
+            border: 1px solid black;
+            position: absolute;
+            left: 0;
+        }
+
+        #box_all_1 {
+            background-color: blue;
+        }
+
+        #box_all_2 {
+            background-color: red;
+        }
+
+        #box_all_3 {
+            background-color: yellow;
+        }
+
+        #box_all_4 {
+            background-color: green;
+        }
+
+        .box_all_box {
+            width: 100%;
+            height: 500px;
+            position: fixed;
+            transition: 2s;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="butten1" class="button" onclick="box_run(1)">1</div>
+    <div id="butten2" class="button" onclick="box_run(2)">2</div>
+    <div id="butten3" class="button" onclick="box_run(3)">3</div>
+    <div id="butten4" class="button" onclick="box_run(4)">4</div>
+    <div id="all">
+        <div id="box_all">
+            <div id="box_all_1" class="box_all_box"></div>
+            <div id="box_all_2" class="box_all_box"></div>
+            <div id="box_all_3" class="box_all_box"></div>
+            <div id="box_all_4" class="box_all_box"></div>
+        </div>
+    </div>
+    <script>
+        var box_all = document.getElementById("box_all");
+        var now_num;
+        var now;
+        var name;
+        var w; //抓取螢幕的寬度
+        var a;
+        var abc;
+        window.onload = function () {
+            now_num = 0;
+            now = "box_all_1";
+            document.getElementById(now).style.display = "block";
+            box_run(2);
+            box_run(3);
+            box_run(4);
+            box_run(1);
+    
+        }
+
+        function box_run(id) {
+
+            name = 'box_all_' + id;
+            if (name == now) {
+                return 0;
+            } else {
+                w = document.body.clientWidth;
+                document.getElementById(now).style.display = "none";
+                document.getElementById(now).style.zIndex = 0;
+                document.getElementById(name).style.display = "block";
+                document.getElementById(name).style.zIndex = 1;
+                console.log(w);
+                var a = TweenMax.from('#' + name, 0.5, {
+                    // scale: 0.6,
+                    x: w,
+                    ease: Back.easeOut,
+                    oncomplete: final()
+
+                });
+            }
+
+            // var hover_nav_L_box_content_show_text = TweenMax.to('#' + id, 0.2, {
+            //     textShadow: "1px 1px 1px rgba(255, 255, 255, 0.5)",
+            //     color: "#000"
+            // });
+            // // index = 200;
+            // console.log(w);
+            // index *= w;
+            // index *= -1;
+            // index = index + 'px';
+            // console.log(index);
+            // box_all.style.transform = "translate(" + index + ")";
+        }
+
+        function final() {
+            now = name;
+        }
+        // function abs(){
+        //     abc.kill();
+        // }
+    </script>
+</body>
+
+</html>

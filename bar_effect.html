@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: aqua;
+        }
+        .percent_count {
+            width: 450px;
+            height: 50px;
+            margin: 100px auto;
+            font-size: 50px;
+            text-align: center;
+            color: white;
+        }
+        .progress_bar {
+            width: 506px;
+            height: 26px;
+            background-color: #bbb;      
+            border-radius: 13px;
+            padding: 3px;
+            margin: 50px auto;
+        }
+        .progress {
+            width: 25px;
+            height: 20px;
+            border-radius: 10px;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div id="percentCount" class="percent_count">100%test </div>
+    <div class="progress_bar">
+        <div id="progress" class="progress"></div>
+    </div>
+
+    <script>
+        function progress (){
+            var prg = document.getElementById("progress");
+            var percent = document.getElementById("percentCount");
+            var counter = 5;
+            var progress = 25;
+            var id = setInterval(frame,50);
+
+            function frame(){
+                if(progress == 500 && counter ==100){
+                    clearInterval(id);
+                }
+                else{
+                    progress +=5;
+                    counter +=1;
+                    prg.style.width = progress+"px";
+                    percent.innerHTML = counter+"%";
+                }
+            }
+        }
+        progress();
+    </script>
+</body>
+</html>

@@ -1,18 +1,474 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-</head>
+    <link rel="stylesheet" href="Special topic-web.css">
+    <link rel="stylesheet" href="Special topic-web-small.css">
+    <link rel="stylesheet" href="Special topic-web.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenLite.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TimelineLite.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TimelineMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.3/fullpage.extensions.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
 <body>
-    Lorem ipsum dolor sit amet consectetur adipisi
-    cing elit. Consequuntur magni enim placeat quidem animi quis
-     ipsam blanditiis cumque amet aliquam voluptate tenetur fugiat ullam 
-     rem ad, exercitationem nostrum maxime! Similique repudiandae velit tenetu
-     r architecto non dicta asperiores dolor eius,
-     iusto recusandae sed hic blanditiis unde error at quasi 
-     beatae voluptatem!
+    <div id="all">
+        <header class="box">
+            <div id="backgroundImg">
+                <img id="header_img" src="img-design-web/BANNER/BANNER-1.jpg" alt="">
+            </div>
+            <button id="btn1" onclick="add_num()">ADD</button>
+            <button id="btn2" onclick="less_num()">LESS</button>
+            <script src="header.js"></script>
+        </header>
+        <nav>
+            <div id="nav_L" onclick="open_nav_L()">
+                <div id="hamburger_1" class="hamburger"></div>
+                <div id="hamburger_2" class="hamburger"></div>
+                <div id="hamburger_3" class="hamburger"></div>
+            </div>
+            <div id="nav_L_close"></div>
+            <div id="nav_L_box">
+                <a href="header">
+                    <div id="nav_L_box_header" class="nav_L_box_content" target="_top" onmouseenter="hover_nav_L_box_content(this.id)">
+                        <p>首頁</p>
+                        <div id="nav_L_box_header_decor"></div>
+                    </div>
+                </a>
+                <a href="#decor_style">
+                    <div id="nav_L_box_style" class="nav_L_box_content" onmouseenter="hover_nav_L_box_content(this.id)">
+                        <p>風格</p>
+                        <div id="nav_L_box_style_decor"></div>
+                    </div>
+                </a>
+                <a href="#collection">
+                    <div id="nav_L_box_collection" class="nav_L_box_content" onmouseenter="hover_nav_L_box_content(this.id)">
+                        <p>作品</p>
+                        <div id="nav_L_box_collection_decor"></div>
+                    </div>
+                </a>
+                <a href="#designer">
+                    <div id="nav_L_box_designer" class="nav_L_box_content" onmouseenter="hover_nav_L_box_content(this.id)">
+                        <p>設計師</p>
+                        <div id="nav_L_box_designer_decor"></div>
+                    </div>
+                </a>
+                <a href="#connection">
+                    <div id="nav_L_box_connection" class="nav_L_box_content" onmouseenter="hover_nav_L_box_content(this.id)">
+                        <p>連絡我們</p>
+                        <div id="nav_L_box_connection_decor"></div>
+                    </div>
+                </a>
+                <a href="#service">
+                    <div id="nav_L_box_serive" class="nav_L_box_content" onmouseenter="hover_nav_L_box_content(this.id)">
+                        <p>線上服務</p>
+                        <div id="nav_L_box_serive_decor"></div>
+                    </div>
+                </a>
+                <a href="#Process">
+                    <div id="nav_L_box_process" class="nav_L_box_content" onmouseenter="hover_nav_L_box_content(this.id)">
+                        <p>服務流程</p>
+                        <div id="nav_L_box_process_decor"></div>
+                    </div>
+                </a>
+            </div>
+            <div id="nav_R"></div>
+        </nav>
+        <div id="decor_style" class="box">
+
+            <div id="show_style_info">
+                <div id="show_style_info_close" onclick="close_style_info()">X</div>
+                <div id="show_style_info_title">現代簡約風格</div>
+                <div id="show_style_info_content">
+                    <p>注重居室的實用性，而且還體現出了現代社會生活的精緻與個性，符合現代人的生活品位。
+                        <br>從繁忙工作中解脫出來，不願花許多心思打理房間、享受簡單生活的人，沉浸於工作的高級白領、教師、單身貴族等。</p>
+                </div>
+                <div id="show_style_info_imgtop">
+                    <img id="show_style_info_img_top" src="img-design-web/style/new Chinese style/new Chinese style-1.jpg"
+                        alt="">
+                </div>
+                <div id="show_style_info_imgbottom">
+                    <img id="show_style_info_img_bottom" src="img-design-web/style/Modern minimalist style/Modern minimalist style-2.jpg"
+                        alt="">
+                </div>
+            </div>
+            <div id="show_style_mask" onclick="close_style_info()"></div>
+            <div id="style_container">
+                <p>風格</p>
+                <!-- 命名方式左上為style_left_top,中中為style_mid_mid -->
+                <div id="style_left_top" class="style_box" onmouseenter="show_black_mask(this.id)">
+                    <div id="style_left_top_header" class="header" onclick="show_info(1)">現代簡約風格</div>
+                    <div>
+                        <img id="style_left_top_img" src="img-design-web/style/Modern minimalist style/Modern minimalist style-1.jpg"
+                            alt="">
+                    </div>
+                </div>
+
+                <div id="style_mid_top" class="style_box" onmouseenter="show_black_mask(this.id)">
+                    <div id="style_mid_top_header" class="header" onclick="show_info(2)">中式古典風格</div>
+                    <img id="style_mid_top_img" src="img-design-web/style/Chinese classical/Chinese classical-1.jpg"
+                        alt="">
+                </div>
+
+                <div id="style_right_top" class="style_box" onmouseenter="show_black_mask(this.id)">
+                    <div id="style_right_top_header" class="header" onclick="show_info(3)">雅致主義風格</div>
+                    <img id="style_right_top_img" src="img-design-web/style/Elegant style/Elegant style-1.jpg" alt="">
+                </div>
+
+                <div id="style_left_mid" class="style_box" onmouseenter="show_black_mask(this.id)">
+                    <div id="style_left_mid_header" class="header" onclick="show_info(4)">現代前衛風格</div>
+                    <img id="style_left_mid_img" src="img-design-web/style/Modern avant-garde style/Modern avant-garde style-1.jpg"
+                        alt="">
+                </div>
+
+                <div id="style_mid_mid" class="style_box" onmouseenter="show_black_mask(this.id)">
+                    <div id="style_mid_mid_header" class="header" onclick="show_info(5)">新中式風格</div>
+                    <img id="style_mid_mid_img" src="img-design-web/style/new Chinese style/new Chinese style-1.jpg"
+                        alt="">
+                </div>
+
+                <div id="style_right_mid" class="style_box" onmouseenter="show_black_mask(this.id)">
+                    <div id="style_right_mid_header" class="header" onclick="show_info(6)">地中海風格</div>
+                    <img id="style_right_mid_img" src="img-design-web/style/Mediterranean style/Mediterranean style-1.jpg"
+                        alt="">
+                </div>
+
+                <div id="style_left_down" class="style_box" onmouseenter="show_black_mask(this.id)">
+                    <div id="style_left_down_header" class="header" onclick="show_info(7)">地中海風格</div>
+                    <img id="style_left_down_img" src="img-design-web/style/Japanese style/Japanese style-1.jpg" alt="">
+                </div>
+
+                <div id="style_mid_down" class="style_box" onmouseenter="show_black_mask(this.id)">
+                    <div id="style_mid_down_header" class="header" onclick="show_info(8)">混搭風格</div>
+                    <img id="style_mid_down_img" src="img-design-web/style/Mix style/Mix style-1.jpg" alt="">
+                </div>
+
+                <div id="style_right_down" class="style_box" onmouseenter="show_black_mask(this.id)">
+                    <div id="style_right_down_header" class="header" onclick="show_info(9)">美式鄉村風格</div>
+                    <img id="style_right_down_img" src="img-design-web/style/American country style/American country style-1.jpg"
+                        alt="">
+                </div>
+
+            </div>
+        </div>
+        <div id="collection" class="box">
+            <p>作品</p>
+            <div id="Collection_category">
+                <div id="Collection_category_content">
+                    <p>分類</p>
+                </div>
+                <div id="Collection_category_show_outbox">
+                    <div id="Collection_category_show">
+                        <div id="Collection_category_show_left_top" class="Collection_category_box">
+                            <img src="img-design-web/Chengbao/Chengbao-1.JPG" alt="">
+                        </div>
+                        <div id="Collection_category_show_mid_top" class="Collection_category_box">
+                            <img src="img-design-web/Chengbao/Chengbao-2.JPG" alt="">
+                        </div>
+                        <div id="Collection_category_show_right_top" class="Collection_category_box">
+                            <img src="img-design-web/Chengbao/Chengbao-3.JPG" alt="">
+                        </div>
+                        <div id="Collection_category_show_left_bottom" class="Collection_category_box">
+                            <img src="img-design-web/Chengbao/Chengbao-4.JPG" alt="">
+                        </div>
+                        <div id="Collection_category_show_mid_bottom" class="Collection_category_box">
+                            <img src="img-design-web/Chengbao/Chengbao-5.JPG" alt="">
+                        </div>
+                        <div id="Collection_category_show_right_bottom" class="Collection_category_box">
+                            <img src="img-design-web/Chengbao/Chengbao-6.JPG" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="Small_theme">
+                <div id="Small_theme_img">
+                    <div id="Small_theme_img_info">
+                        <div id="Small_theme_img_info_add"> > </div>
+                        <div id="Small_theme_img_info_less">
+                            < </div> <div id="Small_theme_img_info_close"> X
+                        </div>
+                        <img id="Small_theme_img_info_img" src="img-design-web/Zhongli Grand Hyatt Hall/Zhongli Grand Hyatt Hall-1.jpg"
+                            alt="">
+                    </div>
+                </div>
+            </div>
+            <div id="Collection_container">
+
+                <div id="Collection_container_1" class="collection_box">
+                    <img src="img-design-web/collection/Zhongli Grand Hyatt Hall.jpg" alt="" onclick="open_Small_theme(Zhongli_Grand_Hyatt_Hall)">
+                </div>
+                <div id="Collection_container_2" class="collection_box">
+                    <img src="img-design-web/collection/Chengbao.JPG" alt="" onclick="open_Small_theme(Chengbao)">
+                </div>
+                <div id="Collection_container_3" class="collection_box">
+                    <img src="img-design-web/collection/Swallow.jpg" alt="" onclick="open_Small_theme(Swallow)">
+                </div>
+                <div id="Collection_container_4" class="collection_box">
+                    <img src="img-design-web/collection/Swallow.jpg" alt="" onclick="open_Small_theme(Linkou_Yangxin_Store)">
+                </div>
+            </div>
+        </div>
+        <div id="designer" class="box">
+            <p id="designer_p">設計師</p>
+            <div id="designer_info">
+                <div id="designer_info_left">
+                    <div id="designer_info_left_MugShot">
+                        <img src="img-design-web/designer-img/MugShot-1.jpg" alt="">
+                        <p>程智祥</p>
+                    </div>
+                    <div id="designer_info_left_date">
+                        <section id="designer_info_left_date_casearea">
+                            <div class="designer_title">接案區域：</div>
+                            <div class="designer_content">北區 、中區、 南區 、海外地區</div>
+
+                        </section>
+                        <section id="designer_info_left_date_casetype">
+                            <div class="designer_title">接案類型：</div>
+                            <div class="designer_content"> 標準格局、別墅 、大坪數 、樓中樓、 實品／樣品屋 、商業空間 、挑高樓層、 工作空間 、餐飲空間、 民宿旅館
+                                、公共空間、
+                                老屋翻新
+                            </div>
+
+                        </section>
+                        <section id="designer_info_left_date_casestyle">
+                            <div class="designer_title">接案風格：</div>
+                            <div class="designer_content">現代風格、 新古典 、低調奢華 、都會時尚 、個性居家、 混搭 </div>
+
+                        </section>
+                        <section id="designer_info_left_date_casepings">
+                            <div class="designer_title">接案坪數：</div>
+                            <div class="designer_content">不限</div>
+
+                        </section>
+                        <section id="designer_info_left_date_casespecial">
+                            <div class="designer_title">特殊接案：</div>
+                            <div class="designer_content">不接受局部裝修工程；接受設計委託</div>
+
+                        </section>
+                        <section id="designer_info_left_date_casecharging_method">
+                            <div class="designer_title">收費方式：</div>
+                            <div class="designer_content">來電洽詢</div>
+
+                        </section>
+                        <section id="designer_info_left_date_casepayment_standard">
+                            <div class="designer_title">付費方式：</div>
+                            <div class="designer_content">簽約付30％、依工程進度分兩次，各付30％、完工驗收收10％ </div>
+
+                        </section>
+                    </div>
+                </div>
+                <div id="designer_info_right">
+                    <div id="designer_info_collection">
+                        <img id="designer_info_collection_img" src="img-design-web/designer-collection/designer-1/designer-1-6.jpg"
+                            alt="" onclick="open_designer_info_img()">
+                    </div>
+                    <div id="designer_info_right_addbutton" onclick="design_add_img()"></div>
+                    <div id="designer_info_right_lessbutton" onclick="design_less_img()"></div>
+                </div>
+            </div>
+            <div id="designer_info_img">
+                <div id="designer_info_img_box">
+                    <input type="button" value="X" id="designer_info_img_box_close">
+                    <input type="button" value=">" id="designer_info_img_box_add">
+                    <input type="button" value="<" id="designer_info_img_box_less">
+                    <img id="designer_info_img_img" src="img-design-web/designer-collection/designer-1/designer-1-1.jpg"
+                        alt="">
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div id="connection" class="box">
+        <p>連絡我們</p>
+        <div id="connection_info">
+            <div id="connection_info_data">
+                <div id="connection_info_data_tel" class="connection_info_smailbox">
+                    <span class="connection_info_data_title">電話</span><span class="connection_info_data_text">02-22578666</span>
+                </div>
+                <div id="connection_info_data_tax" class="connection_info_smailbox">
+                    <span class="connection_info_data_title">傳真</span><span class="connection_info_data_text">02-22575485</span>
+                </div>
+                <div id="connection_info_data_email" class="connection_info_smailbox">
+                    <span class="connection_info_data_title">信箱</span><span class="connection_info_data_text">et.jrlin@msa.hinet.net</span>
+                </div>
+                <div id="connection_info_data_address" class="connection_info_smailbox">
+                    <span class="connection_info_data_title">地址</span><span class="connection_info_data_text">台北縣板橋市四維路137巷27號</span>
+                </div>
+            </div>
+            <div id="connection_info_ball"></div>
+            <div id="connection_info_map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d903.819590142795!2d121.46345872922228!3d25.024625798998557!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a8141501281d%3A0xac771000b11dee58!2zMjIw5paw5YyX5biC5p2_5qmL5Y2A5Zub57at6LevMTM35be3MjfomZ8!5e0!3m2!1szh-TW!2stw!4v1542075191643"
+                    width="600" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+    <div id="service" class="box">
+        <p>線上服務</p>
+        <div id="service_info">
+            <div class="service_info_box">
+                <div class="service_info_box_title">訪客姓名</div>
+                <input type="text" class="service_info_box_button" required>
+            </div>
+            <div class="service_info_box">
+                <div class="service_info_box_title">屋況</div>
+                <select class="service_info_box_button">
+                    <option value="" disable selected>屋況</option>
+                    <option value="預售屋">預售屋</option>
+                    <option value="新成屋">新成屋(5年以下)</option>
+                    <option value="新成屋">中古屋(5~15年)</option>
+                    <option value="老屋">老屋(15年以上)
+                    </option>
+                </select>
+            </div>
+            <div class="service_info_box">
+                <div class="service_info_box_title">坪數</div>
+                <input type="text" class="service_info_box_button">
+            </div>
+            <div class="service_info_box">
+                <div class="service_info_box_title">聯絡電話</div>
+                <input type="text" class="service_info_box_button" required>
+            </div>
+            <div class="service_info_box">
+                <div class="service_info_box_title">預算</div>
+                <input type="text" class="service_info_box_button">
+            </div>
+            <div class="service_info_box">
+                <div class="service_info_box_title">開工時間</div>
+                <input type="text" class="service_info_box_button">
+            </div>
+            <div id="service_info_email" class="service_info_box">
+                <div class="service_info_box_title">聯絡信箱</div>
+                <input type="email" class="service_info_box_button" checked>
+            </div>
+            <div id="service_info_position" class="service_info_box">
+                <div class="service_info_box_title">房屋位置</div>
+                <input type="text" class="service_info_box_button">
+            </div>
+            <input class="service_info_box" type="submit" value="提交">
+        </div>
+    </div>
+    <div id="Process" class="box">
+        <p>服務流程</p>
+        <div id="Process_info">
+            <div id="Process_info_leftimg" class="Process_info_img">
+                <div id="Process_info_leftimg_1" class="Process_info_img_circle">
+                    <div class="Process_info_img_circle_shadow">
+                        <div class="Process_info_img_circle_smail">
+                            <img src="img-design-web/material/telephone.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div id="Process_info_leftimg_2" class="Process_info_img_circle">
+                    <div class="Process_info_img_circle_shadow">
+                        <div class="Process_info_img_circle_smail">
+                            <img src="img-design-web/material/house.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div id="Process_info_leftimg_3" class="Process_info_img_circle">
+                    <div class="Process_info_img_circle_shadow">
+                        <div class="Process_info_img_circle_smail">
+                            <img src="img-design-web/material/Signing.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div id="Process_info_leftimg_4" class="Process_info_img_circle">
+                    <div class="Process_info_img_circle_shadow">
+                        <div class="Process_info_img_circle_smail">
+                            <img src="img-design-web/material/finish.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="Process_info_support">
+                <img src="img-design-web/material/support.png" height=920px; alt="">
+                <div id="title_1" class="Process_info_support_title">
+                    1.與我們連絡
+                </div>
+                <div id="title_2" class="Process_info_support_title">
+                    3.現場勘查
+                </div>
+                <div id="title_3" class="Process_info_support_title">
+                    5.簽訂合約
+                </div>
+                <div id="title_4" class="Process_info_support_title">
+                    7.工程完工/驗收
+                </div>
+                <div id="title_5" class="Process_info_support_title">
+                    2.會談
+                </div>
+                <div id="title_6" class="Process_info_support_title">
+                    4.初步提案規劃
+                </div>
+                <div id="title_7" class="Process_info_support_title">
+                    6.工程進行
+                </div>
+                <div id="title_8" class="Process_info_support_title">
+                    8.歡喜入住
+                </div>
+                <div id="content_1" class="Process_info_support_contente">
+                    您可透過下列方式，將您的裝修需求提供給我們<br>
+                    1.線上填寫需求表單<br>2.信箱:<br>&nbsp;&nbsp;&nbsp;et.jrlin@msa.hinet.net<br>3.服務電話:02-22578666</div>
+                <div id="content_2" class="Process_info_support_contente">
+                    因案場量多，若無法第一時間派人員現場堪查，建議:客戶可以先提供現場的圖面、照片給設計師評估再與設計師另約現場堪查的時間或致電約訪到公司參訪的時間。
+                </div>
+                <div id="content_3" class="Process_info_support_contente">
+                    雙方簽訂設計委任合約書 / 簽約金10% / 7天合約審閱期 /有效幫客戶掌控預算。
+                </div>
+                <div id="content_4" class="Process_info_support_contente">
+                    同業主驗收完工 / 提供裝修保固。
+                </div>
+                <div id="content_5" class="Process_info_support_contente">
+                    透過聯絡方式，您可提供您裝修上的需求ex.整體規劃、系統櫃設計、工程統包…等，設計師聆聽您的需求。
+                </div>
+                <div id="content_6" class="Process_info_support_contente">
+                    根據初步的提案規劃，初步平面規劃 / 意象照片 / 概略預算(估價單)，透明化報價與詳細品項列表，保障客戶權益。
+                </div>
+                <div id="content_7" class="Process_info_support_contente">
+                    依工程進度及設計圖進行施工 / 依工程合約進度內容收取各階段之工程費用 / 完整記錄工程狀況與進度掌控施工品質
+                </div>
+                <div id="content_8" class="Process_info_support_contente">
+                    歡喜入住客製化的設計家的幸福空間。
+                </div>
+            </div>
+            <div id="Process_info_rightimg" class="Process_info_img">
+                <div id="Process_info_rightimg_1" class="Process_info_img_circle">
+                    <div class="Process_info_img_circle_shadow">
+                        <div class="Process_info_img_circle_smail">
+                            <img src="img-design-web/material/talks.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div id="Process_info_rightimg_2" class="Process_info_img_circle">
+                    <div class="Process_info_img_circle_shadow">
+                        <div class="Process_info_img_circle_smail">
+                            <img src="img-design-web/material/computer.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div id="Process_info_rightimg_3" class="Process_info_img_circle">
+                    <div class="Process_info_img_circle_shadow">
+                        <div class="Process_info_img_circle_smail">
+                            <img src="img-design-web/material/construction.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div id="Process_info_rightimg_4" class="Process_info_img_circle">
+                    <div class="Process_info_img_circle_shadow">
+                        <div class="Process_info_img_circle_smail">
+                            <img src="img-design-web/material/happy.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer></footer>
 </body>
+
 </html>
