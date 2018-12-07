@@ -92,7 +92,7 @@
         top: 0;
         left: 94px;
         z-index: 11;
-        display: flex;
+        display: none;
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
