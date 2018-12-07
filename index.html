@@ -15,274 +15,274 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TimelineMax.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.3/fullpage.extensions.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="header.js"></script>
 
 <body>
-    <div id="all">
-        <header class="box">
-            <div id="backgroundImg">
-                <img id="header_img" src="img-design-web/BANNER/BANNER-1.jpg" alt="">
+
+    <header>
+        <div id="backgroundImg">
+            <img id="header_img" src="img-design-web/BANNER/BANNER-1.jpg" alt="">
+            <button id="btn1" onclick="add_num()">></button>
+            <button id="btn2" onclick="less_num()">
+                <</button>
+        </div>
+    </header>
+    <nav>
+        <div id="nav_L" onclick="open_nav_L()">
+            <div id="hamburger_1" class="hamburger"></div>
+            <div id="hamburger_2" class="hamburger"></div>
+            <div id="hamburger_3" class="hamburger"></div>
+        </div>
+        <div id="nav_L_close"></div>
+        <div id="nav_L_box">
+            <a href="#backgroundImg" id="a1">
+                <div id="nav_L_box_header" class="nav_L_box_content" target="_top" onmouseenter="hover_nav_L_box_content(this.id)">
+                    <p>首頁</p>
+                    <div id="nav_L_box_header_decor"></div>
+                </div>
+            </a>
+            <a href="#decor_style" id="a2">
+                <div id="nav_L_box_style" class="nav_L_box_content" onmouseenter="hover_nav_L_box_content(this.id)">
+                    <p>風格</p>
+                    <div id="nav_L_box_style_decor"></div>
+                </div>
+            </a>
+            <a href="#collection" id="a3">
+                <div id="nav_L_box_collection" class="nav_L_box_content" onmouseenter="hover_nav_L_box_content(this.id)">
+                    <p>作品</p>
+                    <div id="nav_L_box_collection_decor"></div>
+                </div>
+            </a>
+            <a href="#designer" id="a4">
+                <div id="nav_L_box_designer" class="nav_L_box_content" onmouseenter="hover_nav_L_box_content(this.id)">
+                    <p>設計師</p>
+                    <div id="nav_L_box_designer_decor"></div>
+                </div>
+            </a>
+            <a href="#connection" id="a5">
+                <div id="nav_L_box_connection" class="nav_L_box_content" onmouseenter="hover_nav_L_box_content(this.id)">
+                    <p>連絡我們</p>
+                    <div id="nav_L_box_connection_decor"></div>
+                </div>
+            </a>
+            <a href="#service" id="a6">
+                <div id="nav_L_box_serive" class="nav_L_box_content" onmouseenter="hover_nav_L_box_content(this.id)">
+                    <p>線上服務</p>
+                    <div id="nav_L_box_serive_decor"></div>
+                </div>
+            </a>
+            <a href="#Process" id="a7">
+                <div id="nav_L_box_process" class="nav_L_box_content" onmouseenter="hover_nav_L_box_content(this.id)">
+                    <p>服務流程</p>
+                    <div id="nav_L_box_process_decor"></div>
+                </div>
+            </a>
+        </div>
+        <div id="nav_R"></div>
+    </nav>
+    <div id="decor_style" class="box">
+        <p>風格</p>
+        <div id="show_style_info">
+            <div id="show_style_info_close" onclick="close_style_info()">X</div>
+            <div id="show_style_info_title">現代簡約風格</div>
+            <div id="show_style_info_content">
+                <p>注重居室的實用性，而且還體現出了現代社會生活的精緻與個性，符合現代人的生活品位。
+                    <br>從繁忙工作中解脫出來，不願花許多心思打理房間、享受簡單生活的人，沉浸於工作的高級白領、教師、單身貴族等。</p>
             </div>
-            <button id="btn1" onclick="add_num()">ADD</button>
-            <button id="btn2" onclick="less_num()">LESS</button>
-            <script src="header.js"></script>
-        </header>
-        <nav>
-            <div id="nav_L" onclick="open_nav_L()">
-                <div id="hamburger_1" class="hamburger"></div>
-                <div id="hamburger_2" class="hamburger"></div>
-                <div id="hamburger_3" class="hamburger"></div>
+            <div id="show_style_info_imgtop">
+                <img id="show_style_info_img_top" src="img-design-web/style/new Chinese style/new Chinese style-1.jpg"
+                    alt="">
             </div>
-            <div id="nav_L_close"></div>
-            <div id="nav_L_box">
-                <a href="header">
-                    <div id="nav_L_box_header" class="nav_L_box_content" target="_top" onmouseenter="hover_nav_L_box_content(this.id)">
-                        <p>首頁</p>
-                        <div id="nav_L_box_header_decor"></div>
-                    </div>
-                </a>
-                <a href="#decor_style">
-                    <div id="nav_L_box_style" class="nav_L_box_content" onmouseenter="hover_nav_L_box_content(this.id)">
-                        <p>風格</p>
-                        <div id="nav_L_box_style_decor"></div>
-                    </div>
-                </a>
-                <a href="#collection">
-                    <div id="nav_L_box_collection" class="nav_L_box_content" onmouseenter="hover_nav_L_box_content(this.id)">
-                        <p>作品</p>
-                        <div id="nav_L_box_collection_decor"></div>
-                    </div>
-                </a>
-                <a href="#designer">
-                    <div id="nav_L_box_designer" class="nav_L_box_content" onmouseenter="hover_nav_L_box_content(this.id)">
-                        <p>設計師</p>
-                        <div id="nav_L_box_designer_decor"></div>
-                    </div>
-                </a>
-                <a href="#connection">
-                    <div id="nav_L_box_connection" class="nav_L_box_content" onmouseenter="hover_nav_L_box_content(this.id)">
-                        <p>連絡我們</p>
-                        <div id="nav_L_box_connection_decor"></div>
-                    </div>
-                </a>
-                <a href="#service">
-                    <div id="nav_L_box_serive" class="nav_L_box_content" onmouseenter="hover_nav_L_box_content(this.id)">
-                        <p>線上服務</p>
-                        <div id="nav_L_box_serive_decor"></div>
-                    </div>
-                </a>
-                <a href="#Process">
-                    <div id="nav_L_box_process" class="nav_L_box_content" onmouseenter="hover_nav_L_box_content(this.id)">
-                        <p>服務流程</p>
-                        <div id="nav_L_box_process_decor"></div>
-                    </div>
-                </a>
-            </div>
-            <div id="nav_R"></div>
-        </nav>
-        <div id="decor_style" class="box">
-
-            <div id="show_style_info">
-                <div id="show_style_info_close" onclick="close_style_info()">X</div>
-                <div id="show_style_info_title">現代簡約風格</div>
-                <div id="show_style_info_content">
-                    <p>注重居室的實用性，而且還體現出了現代社會生活的精緻與個性，符合現代人的生活品位。
-                        <br>從繁忙工作中解脫出來，不願花許多心思打理房間、享受簡單生活的人，沉浸於工作的高級白領、教師、單身貴族等。</p>
-                </div>
-                <div id="show_style_info_imgtop">
-                    <img id="show_style_info_img_top" src="img-design-web/style/new Chinese style/new Chinese style-1.jpg"
-                        alt="">
-                </div>
-                <div id="show_style_info_imgbottom">
-                    <img id="show_style_info_img_bottom" src="img-design-web/style/Modern minimalist style/Modern minimalist style-2.jpg"
-                        alt="">
-                </div>
-            </div>
-            <div id="show_style_mask" onclick="close_style_info()"></div>
-            <div id="style_container">
-                <p>風格</p>
-                <!-- 命名方式左上為style_left_top,中中為style_mid_mid -->
-                <div id="style_left_top" class="style_box" onmouseenter="show_black_mask(this.id)">
-                    <div id="style_left_top_header" class="header" onclick="show_info(1)">現代簡約風格</div>
-                    <div>
-                        <img id="style_left_top_img" src="img-design-web/style/Modern minimalist style/Modern minimalist style-1.jpg"
-                            alt="">
-                    </div>
-                </div>
-
-                <div id="style_mid_top" class="style_box" onmouseenter="show_black_mask(this.id)">
-                    <div id="style_mid_top_header" class="header" onclick="show_info(2)">中式古典風格</div>
-                    <img id="style_mid_top_img" src="img-design-web/style/Chinese classical/Chinese classical-1.jpg"
-                        alt="">
-                </div>
-
-                <div id="style_right_top" class="style_box" onmouseenter="show_black_mask(this.id)">
-                    <div id="style_right_top_header" class="header" onclick="show_info(3)">雅致主義風格</div>
-                    <img id="style_right_top_img" src="img-design-web/style/Elegant style/Elegant style-1.jpg" alt="">
-                </div>
-
-                <div id="style_left_mid" class="style_box" onmouseenter="show_black_mask(this.id)">
-                    <div id="style_left_mid_header" class="header" onclick="show_info(4)">現代前衛風格</div>
-                    <img id="style_left_mid_img" src="img-design-web/style/Modern avant-garde style/Modern avant-garde style-1.jpg"
-                        alt="">
-                </div>
-
-                <div id="style_mid_mid" class="style_box" onmouseenter="show_black_mask(this.id)">
-                    <div id="style_mid_mid_header" class="header" onclick="show_info(5)">新中式風格</div>
-                    <img id="style_mid_mid_img" src="img-design-web/style/new Chinese style/new Chinese style-1.jpg"
-                        alt="">
-                </div>
-
-                <div id="style_right_mid" class="style_box" onmouseenter="show_black_mask(this.id)">
-                    <div id="style_right_mid_header" class="header" onclick="show_info(6)">地中海風格</div>
-                    <img id="style_right_mid_img" src="img-design-web/style/Mediterranean style/Mediterranean style-1.jpg"
-                        alt="">
-                </div>
-
-                <div id="style_left_down" class="style_box" onmouseenter="show_black_mask(this.id)">
-                    <div id="style_left_down_header" class="header" onclick="show_info(7)">地中海風格</div>
-                    <img id="style_left_down_img" src="img-design-web/style/Japanese style/Japanese style-1.jpg" alt="">
-                </div>
-
-                <div id="style_mid_down" class="style_box" onmouseenter="show_black_mask(this.id)">
-                    <div id="style_mid_down_header" class="header" onclick="show_info(8)">混搭風格</div>
-                    <img id="style_mid_down_img" src="img-design-web/style/Mix style/Mix style-1.jpg" alt="">
-                </div>
-
-                <div id="style_right_down" class="style_box" onmouseenter="show_black_mask(this.id)">
-                    <div id="style_right_down_header" class="header" onclick="show_info(9)">美式鄉村風格</div>
-                    <img id="style_right_down_img" src="img-design-web/style/American country style/American country style-1.jpg"
-                        alt="">
-                </div>
-
+            <div id="show_style_info_imgbottom">
+                <img id="show_style_info_img_bottom" src="img-design-web/style/Modern minimalist style/Modern minimalist style-2.jpg"
+                    alt="">
             </div>
         </div>
-        <div id="collection" class="box">
-            <p>作品</p>
-            <div id="Collection_category">
-                <div id="Collection_category_content">
-                    <p>分類</p>
-                </div>
-                <div id="Collection_category_show_outbox">
-                    <div id="Collection_category_show">
-                        <div id="Collection_category_show_left_top" class="Collection_category_box">
-                            <img src="img-design-web/Chengbao/Chengbao-1.JPG" alt="">
-                        </div>
-                        <div id="Collection_category_show_mid_top" class="Collection_category_box">
-                            <img src="img-design-web/Chengbao/Chengbao-2.JPG" alt="">
-                        </div>
-                        <div id="Collection_category_show_right_top" class="Collection_category_box">
-                            <img src="img-design-web/Chengbao/Chengbao-3.JPG" alt="">
-                        </div>
-                        <div id="Collection_category_show_left_bottom" class="Collection_category_box">
-                            <img src="img-design-web/Chengbao/Chengbao-4.JPG" alt="">
-                        </div>
-                        <div id="Collection_category_show_mid_bottom" class="Collection_category_box">
-                            <img src="img-design-web/Chengbao/Chengbao-5.JPG" alt="">
-                        </div>
-                        <div id="Collection_category_show_right_bottom" class="Collection_category_box">
-                            <img src="img-design-web/Chengbao/Chengbao-6.JPG" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="Small_theme">
-                <div id="Small_theme_img">
-                    <div id="Small_theme_img_info">
-                        <div id="Small_theme_img_info_add"> > </div>
-                        <div id="Small_theme_img_info_less">
-                            < </div> <div id="Small_theme_img_info_close"> X
-                        </div>
-                        <img id="Small_theme_img_info_img" src="img-design-web/Zhongli Grand Hyatt Hall/Zhongli Grand Hyatt Hall-1.jpg"
-                            alt="">
-                    </div>
-                </div>
-            </div>
-            <div id="Collection_container">
+        <div id="show_style_mask" onclick="close_style_info()"></div>
+        <div id="style_container">
 
-                <div id="Collection_container_1" class="collection_box">
-                    <img src="img-design-web/collection/Zhongli Grand Hyatt Hall.jpg" alt="" onclick="open_Small_theme(Zhongli_Grand_Hyatt_Hall)">
-                </div>
-                <div id="Collection_container_2" class="collection_box">
-                    <img src="img-design-web/collection/Chengbao.JPG" alt="" onclick="open_Small_theme(Chengbao)">
-                </div>
-                <div id="Collection_container_3" class="collection_box">
-                    <img src="img-design-web/collection/Swallow.jpg" alt="" onclick="open_Small_theme(Swallow)">
-                </div>
-                <div id="Collection_container_4" class="collection_box">
-                    <img src="img-design-web/collection/Swallow.jpg" alt="" onclick="open_Small_theme(Linkou_Yangxin_Store)">
-                </div>
-            </div>
-        </div>
-        <div id="designer" class="box">
-            <p id="designer_p">設計師</p>
-            <div id="designer_info">
-                <div id="designer_info_left">
-                    <div id="designer_info_left_MugShot">
-                        <img src="img-design-web/designer-img/MugShot-1.jpg" alt="">
-                        <p>程智祥</p>
-                    </div>
-                    <div id="designer_info_left_date">
-                        <section id="designer_info_left_date_casearea">
-                            <div class="designer_title">接案區域：</div>
-                            <div class="designer_content">北區 、中區、 南區 、海外地區</div>
-
-                        </section>
-                        <section id="designer_info_left_date_casetype">
-                            <div class="designer_title">接案類型：</div>
-                            <div class="designer_content"> 標準格局、別墅 、大坪數 、樓中樓、 實品／樣品屋 、商業空間 、挑高樓層、 工作空間 、餐飲空間、 民宿旅館
-                                、公共空間、
-                                老屋翻新
-                            </div>
-
-                        </section>
-                        <section id="designer_info_left_date_casestyle">
-                            <div class="designer_title">接案風格：</div>
-                            <div class="designer_content">現代風格、 新古典 、低調奢華 、都會時尚 、個性居家、 混搭 </div>
-
-                        </section>
-                        <section id="designer_info_left_date_casepings">
-                            <div class="designer_title">接案坪數：</div>
-                            <div class="designer_content">不限</div>
-
-                        </section>
-                        <section id="designer_info_left_date_casespecial">
-                            <div class="designer_title">特殊接案：</div>
-                            <div class="designer_content">不接受局部裝修工程；接受設計委託</div>
-
-                        </section>
-                        <section id="designer_info_left_date_casecharging_method">
-                            <div class="designer_title">收費方式：</div>
-                            <div class="designer_content">來電洽詢</div>
-
-                        </section>
-                        <section id="designer_info_left_date_casepayment_standard">
-                            <div class="designer_title">付費方式：</div>
-                            <div class="designer_content">簽約付30％、依工程進度分兩次，各付30％、完工驗收收10％ </div>
-
-                        </section>
-                    </div>
-                </div>
-                <div id="designer_info_right">
-                    <div id="designer_info_collection">
-                        <img id="designer_info_collection_img" src="img-design-web/designer-collection/designer-1/designer-1-6.jpg"
-                            alt="" onclick="open_designer_info_img()">
-                    </div>
-                    <div id="designer_info_right_addbutton" onclick="design_add_img()"></div>
-                    <div id="designer_info_right_lessbutton" onclick="design_less_img()"></div>
-                </div>
-            </div>
-            <div id="designer_info_img">
-                <div id="designer_info_img_box">
-                    <input type="button" value="X" id="designer_info_img_box_close">
-                    <input type="button" value=">" id="designer_info_img_box_add">
-                    <input type="button" value="<" id="designer_info_img_box_less">
-                    <img id="designer_info_img_img" src="img-design-web/designer-collection/designer-1/designer-1-1.jpg"
+            <!-- 命名方式左上為style_left_top,中中為style_mid_mid -->
+            <div id="style_left_top" class="style_box" onmouseenter="show_black_mask(this.id)">
+                <div id="style_left_top_header" class="header" onclick="show_info(1)">現代簡約風格</div>
+                <div>
+                    <img id="style_left_top_img" src="img-design-web/style/Modern minimalist style/Modern minimalist style-1.jpg"
                         alt="">
                 </div>
+            </div>
+
+            <div id="style_mid_top" class="style_box" onmouseenter="show_black_mask(this.id)">
+                <div id="style_mid_top_header" class="header" onclick="show_info(2)">中式古典風格</div>
+                <img id="style_mid_top_img" src="img-design-web/style/Chinese classical/Chinese classical-1.jpg" alt="">
+            </div>
+
+            <div id="style_right_top" class="style_box" onmouseenter="show_black_mask(this.id)">
+                <div id="style_right_top_header" class="header" onclick="show_info(3)">雅致主義風格</div>
+                <img id="style_right_top_img" src="img-design-web/style/Elegant style/Elegant style-1.jpg" alt="">
+            </div>
+
+            <div id="style_left_mid" class="style_box" onmouseenter="show_black_mask(this.id)">
+                <div id="style_left_mid_header" class="header" onclick="show_info(4)">現代前衛風格</div>
+                <img id="style_left_mid_img" src="img-design-web/style/Modern avant-garde style/Modern avant-garde style-1.jpg"
+                    alt="">
+            </div>
+
+            <div id="style_mid_mid" class="style_box" onmouseenter="show_black_mask(this.id)">
+                <div id="style_mid_mid_header" class="header" onclick="show_info(5)">新中式風格</div>
+                <img id="style_mid_mid_img" src="img-design-web/style/new Chinese style/new Chinese style-1.jpg" alt="">
+            </div>
+
+            <div id="style_right_mid" class="style_box" onmouseenter="show_black_mask(this.id)">
+                <div id="style_right_mid_header" class="header" onclick="show_info(6)">地中海風格</div>
+                <img id="style_right_mid_img" src="img-design-web/style/Mediterranean style/Mediterranean style-1.jpg"
+                    alt="">
+            </div>
+
+            <div id="style_left_down" class="style_box" onmouseenter="show_black_mask(this.id)">
+                <div id="style_left_down_header" class="header" onclick="show_info(7)">地中海風格</div>
+                <img id="style_left_down_img" src="img-design-web/style/Japanese style/Japanese style-1.jpg" alt="">
+            </div>
+
+            <div id="style_mid_down" class="style_box" onmouseenter="show_black_mask(this.id)">
+                <div id="style_mid_down_header" class="header" onclick="show_info(8)">混搭風格</div>
+                <img id="style_mid_down_img" src="img-design-web/style/Mix style/Mix style-1.jpg" alt="">
+            </div>
+
+            <div id="style_right_down" class="style_box" onmouseenter="show_black_mask(this.id)">
+                <div id="style_right_down_header" class="header" onclick="show_info(9)">美式鄉村風格</div>
+                <img id="style_right_down_img" src="img-design-web/style/American country style/American country style-1.jpg"
+                    alt="">
             </div>
 
         </div>
     </div>
+    <div id="collection" class="box">
+        <p>作品</p>
+        <div id="Collection_category">
+            <div id="Collection_category_content">
+                <p>分類</p>
+            </div>
+            <div id="Collection_category_show_outbox">
+                <div id="Collection_category_show">
+                    <div id="Collection_category_show_left_top" class="Collection_category_box">
+                        <img src="img-design-web/Chengbao/Chengbao-1.JPG" alt="">
+                    </div>
+                    <div id="Collection_category_show_mid_top" class="Collection_category_box">
+                        <img src="img-design-web/Chengbao/Chengbao-2.JPG" alt="">
+                    </div>
+                    <div id="Collection_category_show_right_top" class="Collection_category_box">
+                        <img src="img-design-web/Chengbao/Chengbao-3.JPG" alt="">
+                    </div>
+                    <div id="Collection_category_show_left_bottom" class="Collection_category_box">
+                        <img src="img-design-web/Chengbao/Chengbao-4.JPG" alt="">
+                    </div>
+                    <div id="Collection_category_show_mid_bottom" class="Collection_category_box">
+                        <img src="img-design-web/Chengbao/Chengbao-5.JPG" alt="">
+                    </div>
+                    <div id="Collection_category_show_right_bottom" class="Collection_category_box">
+                        <img src="img-design-web/Chengbao/Chengbao-6.JPG" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="Small_theme">
+            <div id="Small_theme_img">
+                <div id="Small_theme_img_info">
+                    <div id="Small_theme_img_info_add"> > </div>
+                    <div id="Small_theme_img_info_less">
+                        < </div> <div id="Small_theme_img_info_close"> X
+                    </div>
+                    <img id="Small_theme_img_info_img" src="img-design-web/Zhongli Grand Hyatt Hall/Zhongli Grand Hyatt Hall-1.jpg"
+                        alt="">
+                </div>
+            </div>
+        </div>
+        <div id="Collection_container">
+
+            <div id="Collection_container_1" class="collection_box">
+                <img src="img-design-web/collection/Zhongli Grand Hyatt Hall.jpg" alt="" onclick="open_Small_theme(Zhongli_Grand_Hyatt_Hall)">
+            </div>
+            <div id="Collection_container_2" class="collection_box">
+                <img src="img-design-web/collection/Chengbao.JPG" alt="" onclick="open_Small_theme(Chengbao)">
+            </div>
+            <div id="Collection_container_3" class="collection_box">
+                <img src="img-design-web/collection/Swallow.jpg" alt="" onclick="open_Small_theme(Swallow)">
+            </div>
+            <div id="Collection_container_4" class="collection_box">
+                <img src="img-design-web/collection/Swallow.jpg" alt="" onclick="open_Small_theme(Linkou_Yangxin_Store)">
+            </div>
+        </div>
+    </div>
+    <div id="designer" class="box">
+        <p id="designer_p">設計師</p>
+        <div id="designer_info">
+            <div id="designer_info_left">
+                <div id="designer_info_left_MugShot">
+                    <img src="img-design-web/designer-img/MugShot-1.jpg" alt="">
+                    <p>程智祥</p>
+                </div>
+                <div id="designer_info_left_date">
+                    <section id="designer_info_left_date_casearea">
+                        <div class="designer_title">接案區域：</div>
+                        <div class="designer_content">北區 、中區、 南區 、海外地區</div>
+
+                    </section>
+                    <section id="designer_info_left_date_casetype">
+                        <div class="designer_title">接案類型：</div>
+                        <div class="designer_content"> 標準格局、別墅 、大坪數 、樓中樓、 實品／樣品屋 、商業空間 、挑高樓層、 工作空間
+                            、餐飲空間、 民宿旅館
+                            、公共空間、
+                            老屋翻新
+                        </div>
+
+                    </section>
+                    <section id="designer_info_left_date_casestyle">
+                        <div class="designer_title">接案風格：</div>
+                        <div class="designer_content">現代風格、 新古典 、低調奢華 、都會時尚 、個性居家、 混搭 </div>
+
+                    </section>
+                    <section id="designer_info_left_date_casepings">
+                        <div class="designer_title">接案坪數：</div>
+                        <div class="designer_content">不限</div>
+
+                    </section>
+                    <section id="designer_info_left_date_casespecial">
+                        <div class="designer_title">特殊接案：</div>
+                        <div class="designer_content">不接受局部裝修工程；接受設計委託</div>
+
+                    </section>
+                    <section id="designer_info_left_date_casecharging_method">
+                        <div class="designer_title">收費方式：</div>
+                        <div class="designer_content">來電洽詢</div>
+
+                    </section>
+                    <section id="designer_info_left_date_casepayment_standard">
+                        <div class="designer_title">付費方式：</div>
+                        <div class="designer_content">簽約付30％、依工程進度分兩次，各付30％、完工驗收收10％ </div>
+
+                    </section>
+                </div>
+            </div>
+            <div id="designer_info_right">
+                <div id="designer_info_collection">
+                    <img id="designer_info_collection_img" src="img-design-web/designer-collection/designer-1/designer-1-6.jpg"
+                        alt="" onclick="open_designer_info_img()">
+                </div>
+                <div id="designer_info_right_addbutton" onclick="design_add_img()"></div>
+                <div id="designer_info_right_lessbutton" onclick="design_less_img()"></div>
+            </div>
+        </div>
+        <div id="designer_info_img">
+            <div id="designer_info_img_box">
+                <input type="button" value="X" id="designer_info_img_box_close">
+                <input type="button" value=">" id="designer_info_img_box_add">
+                <input type="button" value="<" id="designer_info_img_box_less">
+                <img id="designer_info_img_img" src="img-design-web/designer-collection/designer-1/designer-1-1.jpg"
+                    alt="">
+            </div>
+        </div>
+
+    </div>
+
     <div id="connection" class="box">
         <p>連絡我們</p>
         <div id="connection_info">
@@ -468,7 +468,6 @@
             </div>
         </div>
     </div>
-    <footer></footer>
 </body>
 
 </html>
