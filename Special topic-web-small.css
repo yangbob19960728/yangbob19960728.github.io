@@ -962,6 +962,7 @@ nav #nav_L_close {
 }
 #Process #Process_info #Process_info_support img {
     vertical-align: top;
+    display: none;
 }
 #Process #Process_info #Process_info_support .Process_info_support_title {
     width: 176px;

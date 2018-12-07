@@ -13,7 +13,9 @@
 
     header {
         display: flex;
+        max-height:100vh;
         height: auto;
+        overflow: hidden;
     }
 
     header img {
@@ -26,15 +28,18 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        position: relative;
     }
 
     header button {
         cursor: pointer;
         color: black;
-        font-size: 30px;
+        font-size: 50px;
         position: absolute;
         top: 50%;
         right: 10px;
+        opacity: 0.7;
+        transform: translate(0,-50%);
     }
 
 
@@ -50,7 +55,6 @@
 
     .box {
         width: 100%;
-        height: 100vh;
     }
 
     nav #nav_L {
@@ -62,9 +66,9 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: white;
+        background-color:#6fa8ed;
         cursor: pointer;
-        z-index: 4;
+        z-index: 12;
     }
 
     nav #nav_L_close {
@@ -77,24 +81,22 @@
         justify-content: center;
         align-items: center;
         cursor: pointer;
-        z-index: 5;
+        z-index: 13;
     }
 
     #nav_L_box {
         width: calc(100% - 94px);
         height: 100vh;
-        background-color: #499BCB;
+        background-color: #9B876E;
         position: fixed;
         top: 0;
         left: 94px;
-        z-index: 1;
+        z-index: 11;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
-        transform-origin: left 50%;
-        transform: rotateY(90deg);
-        opacity: 0.3;
+        opacity: 0;
     }
     #nav_L_box a {
         width: 60%;
@@ -174,11 +176,19 @@
     }
 
     #decor_style {
-        background-color: blanchedalmond;
+        background-color: white;
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
+        position: relative;
+    }
+    #decor_style p {
+        position: absolute;
+        top: 3%;
+        left: 13%;
+        font-size: 60px;
+        font-family: '標楷體';
     }
 
     #show_style_mask {
@@ -263,6 +273,8 @@
     }
 
     #style_container {
+        margin-top: 100px;
+        margin-bottom: 100px;
         width: calc(64.5% - 60px);
         height: auto;
         display: flex;
@@ -275,13 +287,7 @@
         position: relative;
     }
 
-    #style_container p {
-        position: absolute;
-        top: -6%;
-        left: -23%;
-        font-size: 60px;
-        font-family: '標楷體';
-    }
+    
 
     .style_box {
         width: 31.5%;
@@ -338,7 +344,7 @@
     }
 
     #collection {
-        background-color: beige;
+        background-color: white;
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -348,8 +354,8 @@
 
     #collection p {
         position: absolute;
-        top: 20px;
-        left: 128px;
+        top: 3%;
+        left: 13%;
         font-family: '標楷體';
         font-size: 60px;
     }
@@ -373,6 +379,8 @@
         flex-direction: row;
         justify-content: space-between;
         transform: translate(47px);
+        margin-top: 100px;
+        margin-bottom: 100px;
         /*NAV_L寬度94的一半 = 47*/
         border: 1px solid black;
     }
@@ -536,8 +544,8 @@
 
     #designer_p {
         position: absolute;
-        top: 20px;
-        left: 128px;
+        top: 3%;
+        left: 13%;
         font-family: '標楷體';
         font-size: 60px;
         z-index: 10;
@@ -551,13 +559,15 @@
 
     #designer_info {
         width: 55%;
-        height: auto;
-        transform: translate(47px);
+        height: 73%;
+        margin-top: 80px;
+        margin-bottom: 100px;
+        transform: translate(47px,30px);
         /*因為nav所以要往右偏一點*/
     }
 
     #designer_info_left {
-        width: 41%;
+        width: 50%;
         height: auto;
         float: left;
     }
@@ -576,11 +586,12 @@
 
     #designer_info_left_date {
         width: 100%;
-        height: auto;
+        height: 20vh;
+        overflow: scroll;
     }
 
     #designer_info_right {
-        width: 58%;
+        width: 50%;
         height: auto;
         float: right;
         display: flex;
@@ -650,7 +661,7 @@
         display: none;
         justify-content: center;
         align-items: center;
-        z-index: 2;
+        z-index: 20;
     }
 
     #designer #designer_info_img #designer_info_img_box {
@@ -716,12 +727,13 @@
         justify-content: center;
         align-items: center;
         position: relative;
+        margin-bottom: 100px;
     }
 
     #connection P {
         position: absolute;
-        top: 20px;
-        left: 128px;
+        top: 3%;
+        left: 13%;
         font-family: '標楷體';
         font-size: 60px;
         z-index: 10;
@@ -730,7 +742,7 @@
     #connection #connection_info {
         width: 80%;
         background-color: white;
-        transform: translate(47px);
+        transform: translate(47px,30px);
         display: flex;
         flex-wrap: wrap;
     }
@@ -738,7 +750,7 @@
     #connection #connection_info #connection_info_data {
         width: 80%;
         margin-left: 3%;
-        margin-top: 3vh;
+        margin-top: 80px;
         margin-right: 4%;
         margin-bottom: 3vh;
     }
@@ -779,7 +791,7 @@
     }
 
     #service {
-        background-color: #9A999A;
+        background-color: white;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -797,12 +809,14 @@
 
     #service #service_info {
         width: 61.5%;
+        margin-top: 120px;
         background-color: #6B6B6B;
         transform: translate(47px);
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
+        border-radius: 25px;
     }
 
     #service_info input[type=submit] {
@@ -838,7 +852,7 @@
         border: 2px solid black;
         font-size: 20px;
         padding-left: 12px;
-        background-image: linear-gradient(to bottom, #2F2F2F, #DDDDDD);
+        background-color: white;
         color: black;
     }
 
@@ -862,7 +876,7 @@
         height: calc(100vh - 45px);
         background-color: white;
         position: relative;
-        margin-top: 100px;
+        margin-top: 120px;
     }
 
     #Process p {

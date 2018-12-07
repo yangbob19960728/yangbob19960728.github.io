@@ -66,60 +66,36 @@ window.onload = function( ){
     design2_num = 15;
     design1_img = ["img-design-web/designer-collection/designer-1/designer-1-1.jpg","img-design-web/designer-collection/designer-1/designer-1-2.jpg","img-design-web/designer-collection/designer-1/designer-1-3.jpg","img-design-web/designer-collection/designer-1/designer-1-4.jpg","img-design-web/designer-collection/designer-1/designer-1-5.jpg","img-design-web/designer-collection/designer-1/designer-1-6.jpg","img-design-web/designer-collection/designer-1/designer-1-7.jpg","img-design-web/designer-collection/designer-1/designer-1-8.jpg","img-design-web/designer-collection/designer-1/designer-1-9.jpg","img-design-web/designer-collection/designer-1/designer-1-10.jpg","img-design-web/designer-collection/designer-1/designer-1-11.jpg"];
 }
-// $(document).ready(function(){
-//     $('#all').fullpage();
-// });
 
 //打開nav bar的函數
 function open_nav_L(){
     // console.log(1);
     document.getElementById("nav_L_close").style.display = "block";
-    var a = TweenMax.to("#nav_L_box",2,{
-        rotationY:0,
-        transformOrigin:"left 50%",
-        // z:400,
-        // scale: 0.8,
-         opacity:1,
-        // perspective:800,
-        transformStyle:"preserve-3d",
-        transformPerspective:600,
-        perspectiveOrigin:"50% 50%",
-        backfaceVisibility: "hidden",
-        ease: Back.easeOut      //ease為速度的設定值   ,Elastic~Power0~3~Back~Bounce~Rough~SlowMo~Steppped       ,linear~Ease in~Ease out~Ease in out
+    document.getElementById("nav_L_box").style.display = "flex";
+    var a = TweenMax.to("#nav_L_box",1,{
+    opacity:1
     });
     document.getElementById("nav_L_close").addEventListener("click",close_nav_L);
+    document.getElementsById('a1').addEventListener("click",close_nav_L);
     function close_nav_L(){
-        document.getElementById("nav_L_box").style.display = "none";
-        // var w = document.getElementById("nav_L_box").offsetWidth;
-        // console.log(w);
-        // var b = TweenMax.to("#nav_L_box",1,{
-        //     x:-w,
-        //     ease: Back.easeOut      //ease為速度的設定值   ,Elastic~Power0~3~Back~Bounce~Rough~SlowMo~Steppped       ,linear~Ease in~Ease out~Ease in out
-        // });
-        document.getElementById("nav_L_close").removeEventListener("click",close_nav_L);
-        
-        // setTimeout(function () {
-        //     b.kill();
-        //     document.getElementById("nav_L_box").style.display = "block";
-        //     document.getElementById("nav_L_box").style.left = 0 + 'px';
-        //     console.log(1);
-        // }, 500);
-        // setTimeout(function () {
-        //     document.getElementById("nav_L_box").style.display = "block";
-        //     TweenMax.to("#nav_L_box", 0.01, {
-        //         x: 0,
-        //         ease: Power0.linear
-        //     });
-        // }, 500);
-        
+        TweenMax.to("#nav_L_box",0.8,{
+            opacity:0
+        });
+        setTimeout(function(){
+            document.getElementById("nav_L_box").style.display = "none";
+            document.getElementById("nav_L_close").style.display = "none";
+        },800);
+       
+    document.getElementById("nav_L_close").removeEventListener("click",close_nav_L);
+    document.getElementsByClassName("a1").removeEventListener("click",close_nav_L);
     }
 }
 function hover_nav_L_box_content(id){
 
  var  hover_nav_L_box_content_show = TweenMax.fromTo('#' + id, 0.7, {
-        boxShadow: "0px 0px 0px 0px rgba(0,255,0,0.3)"   //from
+        boxShadow: "0px 0px 0px 0px rgba(237,185,123,0.3)"   //from
     },{
-        boxShadow: "0px 0px 20px 10px rgba(0,255,0,0.7)",  //to
+        boxShadow: "0px 0px 20px 10px rgba(237,185,123,0.7)",  //to
         repeat: -1,
         yoyo: true,
         ease:Linear.easeNone
