@@ -453,14 +453,14 @@
     }
 
     #collection #Small_theme {
-        width: calc(100% - 94px);
+        width: 100%;
         height: 100vh;
         background-color: black;
         display: flex;
         position: fixed;
         top: 0;
-        left: 94px;
-        z-index: 1;
+        left: 0;
+        z-index: 51;
         justify-content: center;
         align-items: center;
         display: none;
@@ -558,23 +558,24 @@
     }
 
     #designer_info {
-        width: 55%;
-        height: 73%;
+        width: 710px;
+        height: 446px;
         margin-top: 80px;
         margin-bottom: 100px;
         transform: translate(47px,30px);
         /*因為nav所以要往右偏一點*/
+        display: flex;
     }
 
     #designer_info_left {
-        width: 50%;
+        flex: 1;
         height: auto;
         float: left;
     }
 
     #designer_info_left_MugShot {
-        width: 38%;
-        height: auto;
+        width: 134px;
+        height: 204px;
     }
 
     #designer_info_left_MugShot p {
@@ -586,12 +587,12 @@
 
     #designer_info_left_date {
         width: 100%;
-        height: 20vh;
+        height: 242px;
         overflow: scroll;
     }
 
     #designer_info_right {
-        width: 50%;
+       flex: 1;
         height: auto;
         float: right;
         display: flex;
@@ -633,7 +634,7 @@
 
     .designer_title {
         /* border: 1px solid black; */
-        font-size: 18px;
+        font-size: 15px;
         font-family: '微軟正黑體';
         color: beige;
     }
@@ -652,11 +653,11 @@
     }
 
     #designer #designer_info_img {
-        width: calc(100% - 94px);
+        width: 100%;
         height: 100vh;
         position: fixed;
         top: 0;
-        left: 94px;
+        left: 0;
         background-color: black;
         display: none;
         justify-content: center;
@@ -800,8 +801,8 @@
 
     #service p {
         position: absolute;
-        top: 20px;
-        left: 128px;
+        top: 3%;
+        left: 13%;
         font-family: '標楷體';
         font-size: 60px;
         z-index: 10;
@@ -881,8 +882,8 @@
 
     #Process p {
         position: absolute;
-        top: -80px;
-        left: 128px;
+        top: 3%;
+        left: 13%;
         font-family: '標楷體';
         font-size: 60px;
         z-index: 10;
@@ -893,7 +894,7 @@
         height: 100%;
         margin-left: auto;
         margin-right: auto;
-        transform: translate(47px);
+        transform: translate(47px,80px);
     }
 
     #Process #Process_info .Process_info_img {

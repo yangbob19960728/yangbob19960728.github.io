@@ -2,16 +2,24 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    background-color: antiquewhite;
+    width: 100%;
+    background-color: white;
+    margin: 0;
+    padding: 0;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    position: static;
 }
 
 header {
+    width: 100%;
     height: auto;
+    z-index: 1;
+    align-self: stretch;
 }
 
 header img {
@@ -21,32 +29,34 @@ header img {
 header #backgroundImg {
     width: 100%;
     display: flex;
-    margin-top: 60px;
     justify-content: center;
     align-items: center;
+    position: relative;
+    padding-top: 60px;
 }
 
 header button {
-    width: 100px;
-    height: 100px;
-    background-color: black;
+    width: 35px;
+    height: 35px;
+    background-color:rgba(0, 0, 0, 0.3);
     cursor: pointer;
     color: white;
     font-size: 30px;
+    text-align: center;
+    line-height: 35px;
     position: absolute;
-    top: 20px;
-    left: 100px;
+    top: 50%;
+    border: none;
 }
 
 
 #btn1 {
-    margin-top: 94px;
-    display: none;
-    
-}#btn2 {
-    left: 400px;
-    display: none;
-    margin-top: 94px;
+    display: block;
+    right:5%;
+}
+#btn2 {
+    left: 5%;
+    display: block;
 }
 
 .box {
@@ -57,45 +67,47 @@ nav #nav_L {
     width: 100%;
     height: 60px;
     position: fixed;
-    top: 0%;
-    left: 0%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
+    top: 0px;
+    left: 0px;
+    background-color: #6FA8ED;
+    z-index: 12;
     cursor: pointer;
-    z-index: 4;
 }
-nav #nav_L_close {
-    width: 94px;
-    height: 100vh;
-    position: fixed;
-    top: 0%;
-    left: 0%;
-    display: none;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    z-index: 5;
-}
-#nav_L_box {
-    width: calc(100% - 94px);
-    height: 100vh;
-    background-color: #499BCB;
+ nav #nav_L_close {
+    width: 100%;
+    height: 60px;
     position: fixed;
     top: 0;
-    left: 94px;
-    z-index: 1;
+    left: 0;
+    z-index: 13;
+    display: none;
+} 
+#nav_L_box {
+    width: 100%;
+    height: 57%;
+    background-color: #9B876E;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    z-index: 11;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    transform-origin: left 50%;
-    transform: rotateY(90deg);
-    opacity: 0.3;
+    opacity: 0;
+    display: none;
+}
+#nav_L_box a {
+    width: 100%;
+    margin-left: 5%;
+    text-decoration: none;
+}
+#nav_L_box a p{
+    color: white;
+    text-shadow: 0 0 3px black;
 }
 .nav_L_box_content {
-    width: 60%;
+    width: 90%;
     height:8vh;
     color: white;
     font-size: 35px;
@@ -103,9 +115,6 @@ nav #nav_L_close {
     justify-content: flex-start;
     align-items: center;
     cursor: pointer;
-}
-#nav_L_box #nav_L_box_header {
-    margin-top: 22vh;
 }
 #nav_L_box .nav_L_box_content p {
     float: left;
@@ -155,21 +164,29 @@ nav #nav_L_close {
     position: absolute;
     right: 20px;
     background-color: black;
-    margin-bottom: 4px;
+    top: 18px;
 }
 #hamburger_1 {
-    top: 18px;
+    top: 28px;
 }
 #hamburger_3 {
     top: 38px;
 }
 
 #decor_style {
-    background-color: blanchedalmond;
+    background-color: white;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+#decor_style p {
+    width: 100%;
+    font-size: 50px;
+    text-align: center;
+    padding: 10px;
+    background-color: #B5B5B6;
+    margin-top: 60px;
 }
 
 #show_style_mask {
@@ -181,7 +198,7 @@ nav #nav_L_close {
     top: 0;
     left: 0;
     background-color: black;
-    z-index: 1;
+    z-index: 14;
     opacity: 0.5;
     display: none;
 }
@@ -202,7 +219,7 @@ nav #nav_L_close {
     background-color: aliceblue;
     flex-direction: row;
     align-items: flex-start;
-    z-index: 2;
+    z-index: 15;
     border: 1px solid black;
 }
 
@@ -223,7 +240,7 @@ nav #nav_L_close {
 #show_style_info_title {
     width: 100%;
     height: auto;
-    font-size: 50px;
+    font-size:35px;
     font-family: "PMingLiU";
     /*新細明體*/
     color: #703B04;
@@ -242,14 +259,14 @@ nav #nav_L_close {
     margin-right: auto;
     margin-left: auto;
     margin-top: 12px;
-    font-size: 120%;
+    font-size: 100%;
     font-family: '標楷體';
     word-spacing: 2em;
     margin-bottom: 12px;
 }
 
 #show_style_info_imgtop {
-    width: 82%;
+    width: 70%;
     margin-left: auto;
     margin-right: auto;
     height: auto;
@@ -258,7 +275,7 @@ nav #nav_L_close {
  }
 
 #show_style_info_imgbottom {
-    width: 82%;
+    width: 70%;
     margin-left: auto;
     margin-right: auto;
     height: auto;
@@ -327,7 +344,7 @@ nav #nav_L_close {
 
 
 #collection {
-    background-color: beige;
+    background-color: white;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -340,6 +357,7 @@ nav #nav_L_close {
     text-align: center;
     padding: 10px;
     background-color: #B5B5B6;
+    margin-top: 60px;
 }
 #collection #Collection_container img {
     width: 100%;
@@ -352,7 +370,6 @@ nav #nav_L_close {
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
-    border: 1px solid black;
 }
 
 #Collection_category {
@@ -409,16 +426,17 @@ nav #nav_L_close {
     width: 100%;
     margin-bottom: 20px;
     cursor: pointer;
+    
 }
 
 #collection #Small_theme {
-    width: 80%;
+    width: 90%;
     height: 80vh;
     display: flex;
     position: fixed;
-    top:10%;
-    left: 10%;
-    z-index: 5;
+    top:60px;
+    left: 5%;
+    z-index: 16;
     justify-content: center;
     align-items: center;
     display: none;
@@ -429,6 +447,8 @@ nav #nav_L_close {
 #collection #Small_theme #Small_theme_img #Small_theme_img_info {
     width: 100%;
     position: relative;
+    box-shadow: 0 0 8px black;
+    border: 10px groove white;
 }
 #collection #Small_theme #Small_theme_img #Small_theme_img_info #Small_theme_img_info_add {
     width: 50px;
@@ -485,7 +505,7 @@ nav #nav_L_close {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    background-color: darkgrey;
+    background-color: white;
 }
 #designer p{
     width: 100%;
@@ -493,6 +513,7 @@ nav #nav_L_close {
     text-align: center;
     padding: 10px;
     background-color: #B5B5B6;
+    margin-top: 60px;
 }
 #designer img {
     width: 100%;
@@ -503,20 +524,17 @@ nav #nav_L_close {
 #designer_info {
     width: 100%;
     height: auto;
-    border: 1px solid black;
 }
 
 #designer_info_left {
     width:100;
     height: auto;
-    border: 1px solid black;
     float: left;
 }
 
 #designer_info_left_MugShot {
     width: 60%;
     height: auto;
-    border: 1px solid black;
 }
 
 #designer_info_left_MugShot p {
@@ -524,12 +542,13 @@ nav #nav_L_close {
     font-weight: bold;
     font-family: "微軟正黑體";
     font-size: 20px;
+    margin: 0;
 }
 
 #designer_info_left_date {
     width: 100%;
     height: auto;
-    border: 1px solid black;
+    padding: 20px 15px;
 }
 
 #designer_info_right {
@@ -574,18 +593,19 @@ nav #nav_L_close {
 
 .designer_title {
     /* border: 1px solid black; */
-    font-size: 20px;
+    font-size: 15px;
     font-family: '微軟正黑體';
-    color: beige;
+    color: black;
+    font-weight: 900;
 }
 
 .designer_content {
-    width: 77%;
+    width: 70%;
     /* border: 1px solid black; */
     text-align: left;
-    font-size: 20px;
+    font-size: 15px;
     font-family: '微軟正黑體';
-    color: azure;
+    color: black;
 }
 
 #designer section {
@@ -653,7 +673,7 @@ nav #nav_L_close {
     font-size: 90px;
 }
 #connection {
-    background-color: aquamarine;
+    background-color: white;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -665,13 +685,13 @@ nav #nav_L_close {
     text-align: center;
     padding: 10px;
     background-color: #B5B5B6;
+    margin-top: 60px;
  }
 #connection #connection_info {
     width: 100%;
     background-color: white;
     display: flex;
     flex-wrap: wrap;
-    padding-left: 20px;
 }
 
 #connection #connection_info #connection_info_data {
@@ -699,7 +719,7 @@ nav #nav_L_close {
 }
 
 #connection_info_data_address .connection_info_data_text {
-    font-size: 20px;
+    font-size: 18px;
     font-family: "微軟正黑體";
     font-weight: bold;
 }
@@ -713,7 +733,7 @@ nav #nav_L_close {
     vertical-align: top;
 }
 #service {
-    background-color: #9A999A;
+    background-color: white;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -725,6 +745,7 @@ nav #nav_L_close {
     text-align: center;
     padding: 10px;
     background-color: #B5B5B6;
+    margin-top: 60px;
 }
 #service #service_info {
     width: 100%;
@@ -733,6 +754,8 @@ nav #nav_L_close {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    border-radius: 25px;
+    margin-top: 20px;
 }
 #service_info input[type=submit] {
     width: 25.6%;
@@ -786,15 +809,16 @@ nav #nav_L_close {
     background-color: white;
 }
 #Process p {
-    width: calc(100% - 20px);
+    width: 100%;
     font-size: 50px;
     text-align: center;
     padding: 10px;
     background-color: #B5B5B6;
+    margin-top: 60px;
 }
 #Process #Process_info {
-    width: 600px;
-    height: 100%;
+    width: 100%;
+    height: 93%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -899,7 +923,7 @@ nav #nav_L_close {
     border: 1px solid black;
     border-radius: 65px;
     background-color: black;
-    top:220px;
+    top:280px;
     position: absolute;
     z-index: 10;
     left: 10px;
@@ -920,7 +944,7 @@ nav #nav_L_close {
     background-color: #466178;
     border: 1px solid #466178;
     box-shadow: 0 0 1px #152B35;
-    top: 650px;
+    top: 710px;
 }
 #Process #Process_info #Process_info_rightimg #Process_info_rightimg_2 img {
     width: 75%;
@@ -932,7 +956,7 @@ nav #nav_L_close {
     background-color: #A48879;
     border: 1px solid #A48879;
     box-shadow: 0 0 1px #152B35;
-    top: 1000px;
+    top: 1060px;
 }
 #Process #Process_info #Process_info_rightimg #Process_info_rightimg_3 img {
     width: 85%;
@@ -945,7 +969,7 @@ nav #nav_L_close {
     background-color: #837F93;
     border: 1px solid #837F93;
     box-shadow: 0 0 1px #152B35;
-    top: 1370px;
+    top: 1420px;
 }
 #Process #Process_info #Process_info_rightimg #Process_info_rightimg_4 img {
     width: 80%;

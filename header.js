@@ -32,6 +32,7 @@ var design1_num;                  //設定第一位設計師的作品數目
 var design2_num;                  //設定第二位設計師的作品數目
 var design1_img;                 //存放第一設計師的作品
 var design2_img;                 //存放第二設計師的作品
+
 window.onload = function( ){
     header_img = document.getElementById("header_img");
     num = 0;
@@ -67,6 +68,9 @@ window.onload = function( ){
     design1_img = ["img-design-web/designer-collection/designer-1/designer-1-1.jpg","img-design-web/designer-collection/designer-1/designer-1-2.jpg","img-design-web/designer-collection/designer-1/designer-1-3.jpg","img-design-web/designer-collection/designer-1/designer-1-4.jpg","img-design-web/designer-collection/designer-1/designer-1-5.jpg","img-design-web/designer-collection/designer-1/designer-1-6.jpg","img-design-web/designer-collection/designer-1/designer-1-7.jpg","img-design-web/designer-collection/designer-1/designer-1-8.jpg","img-design-web/designer-collection/designer-1/designer-1-9.jpg","img-design-web/designer-collection/designer-1/designer-1-10.jpg","img-design-web/designer-collection/designer-1/designer-1-11.jpg"];
 }
 
+
+
+
 //打開nav bar的函數
 function open_nav_L(){
     // console.log(1);
@@ -76,7 +80,10 @@ function open_nav_L(){
     opacity:1
     });
     document.getElementById("nav_L_close").addEventListener("click",close_nav_L);
-    document.getElementsById('a1').addEventListener("click",close_nav_L);
+    var a_all = document.getElementsByTagName("a");
+    for ( i=0;i<a_all.length;i++){
+        a_all[i].addEventListener("click",close_nav_L);
+    }
     function close_nav_L(){
         TweenMax.to("#nav_L_box",0.8,{
             opacity:0
@@ -87,7 +94,6 @@ function open_nav_L(){
         },800);
        
     document.getElementById("nav_L_close").removeEventListener("click",close_nav_L);
-    document.getElementsByClassName("a1").removeEventListener("click",close_nav_L);
     }
 }
 function hover_nav_L_box_content(id){

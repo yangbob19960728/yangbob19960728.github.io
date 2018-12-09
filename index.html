@@ -3,28 +3,31 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1, maximum-scale=1",user-scalable="yes">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="Special topic-web.css">
     <link rel="stylesheet" href="Special topic-web-small.css">
     <link rel="stylesheet" href="Special topic-web.css">
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenLite.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TimelineLite.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TimelineMax.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.3/fullpage.extensions.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="header.js"></script>
+    
+    
 
 <body>
-
+   
     <header>
         <div id="backgroundImg">
             <img id="header_img" src="img-design-web/BANNER/BANNER-1.jpg" alt="">
             <button id="btn1" onclick="add_num()">></button>
             <button id="btn2" onclick="less_num()">
                 <</button>
+               
         </div>
     </header>
     <nav>
@@ -267,8 +270,8 @@
                     <img id="designer_info_collection_img" src="img-design-web/designer-collection/designer-1/designer-1-6.jpg"
                         alt="" onclick="open_designer_info_img()">
                 </div>
-                <div id="designer_info_right_addbutton" onclick="design_add_img()"></div>
-                <div id="designer_info_right_lessbutton" onclick="design_less_img()"></div>
+                <div id="designer_info_right_addbutton"></div>
+                <div id="designer_info_right_lessbutton"></div>
             </div>
         </div>
         <div id="designer_info_img">
@@ -468,6 +471,7 @@
             </div>
         </div>
     </div>
+    <script src="header.js"></script>
 </body>
 
 </html>
